@@ -52,7 +52,7 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<View>
-				<Text style={{ fontSize: 24, textAlign: 'center' }}>
+				<Text style={{ fontSize: 24, textAlign: 'center', color:'#fff'}}>
 					Ingresa el texto
 				</Text>
 				<TextInput
@@ -60,7 +60,7 @@ export default function App() {
 					placeholder='Ingresa el texto a leer'
 					onChangeText={setTextToSpeek}
 				/>
-				<Picker
+				<Picker style={{ color: '#fff', borderRadius: 30}}
 					selectedValue={selectedAccent}
 					onValueChange={(itemValue, itemIndex) =>
 						setSelectedAccent(itemValue)
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
-		backgroundColor: '#ecf0f1',
+		backgroundColor: '#000',
 		padding: 8
 	},
 	input: {
@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
 		borderColor: 'gray',
 		borderWidth: 1,
 		marginBottom: 10,
-		padding: 10
+		padding: 10, 
+		color: '#fff', 
+		borderRadius: 10,
 	}
 })
